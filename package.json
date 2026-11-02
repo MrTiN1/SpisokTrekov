@@ -1,0 +1,10 @@
+{
+  "name": "artist-index",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-artists.mjs",
+    "build": "node scripts/sync-artists.mjs --optional"
+  }
+}

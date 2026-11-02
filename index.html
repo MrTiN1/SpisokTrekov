@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07080a" />
+  <meta name="description" content="Каталог музыкальных исполнителей — поиск и копирование имён в один клик. Стиль m3rzo." />
+  <title>ARTIST INDEX — m3rzo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="На главную"><span class="brand-brace">[</span>m3rzo<span class="brand-brace">]</span><i></i></a>
+      <nav class="header-links" aria-label="Навигация"><a href="#catalog">Каталог</a><a href="#about">Информация</a></nav>
+      <div class="header-status"><span class="status-dot"></span> SYSTEM ONLINE <span class="header-sep">/</span> V1.0</div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse-square"></span> MUSIC DATABASE <span class="eyebrow-sep">//</span> PUBLIC ARTIST INDEX</div>
+          <h1 id="hero-title">ТВОЙ<br /><span>ИСПОЛНИТЕЛЬ.</span><br /><span class="outline">ОДИН КЛИК.</span></h1>
+          <p class="hero-description">Все 1 766 исполнителей из каталога «Звука в ухо» — в одном месте. Найди нужного артиста и скопируй его имя одним нажатием.</p>
+          <div class="hero-actions"><a href="#catalog" class="cta-main">ОТКРЫТЬ КАТАЛОГ <span>↘</span></a><span class="hero-hint">[ CTRL + K ] БЫСТРЫЙ ПОИСК</span></div>
+          <div class="hero-footer"><span>001 / ARTIST DATABASE</span><span class="hero-rule"></span><span>SCROLL TO EXPLORE ↓</span></div>
+        </div>
+        <div class="hero-module" aria-hidden="true">
+          <div class="module-head"><span>// DATABASE_PREVIEW</span><span class="module-live"><i></i> CONNECTED</span></div>
+          <div class="module-display">
+            <span class="module-coord module-coord--tl">[ 001.001 ]</span><span class="module-coord module-coord--br">[ SEARCH.READY ]</span>
+            <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+            <div class="orbital-cross">+</div>
+            <span class="module-big-number" id="heroCount">1766</span><span class="module-small-number">ARTISTS<br/>IN DATABASE</span>
+          </div>
+          <div class="module-footer"><span>DATA SOURCE<br/><b>OPEN CATALOG</b></span><span>ACCESS LEVEL<br/><b>PUBLIC / FREE</b></span><span>OPERATION<br/><b>COPY_NAME()</b></span></div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>FIND YOUR SOUND</span><i>✳</i><span>COPY IN ONE CLICK</span><i>✳</i><span>NO REGISTRATION</span><i>✳</i><span>ALL ARTISTS</span><i>✳</i><span>FIND YOUR SOUND</span><i>✳</i><span>COPY IN ONE CLICK</span><i>✳</i><span>NO REGISTRATION</span><i>✳</i><span>ALL ARTISTS</span><i>✳</i></div></div>
+
+      <section class="catalog section" id="catalog" aria-labelledby="catalog-title">
+        <div class="section-heading"><div><p class="section-kicker"><span>01</span> // БАЗА ДАННЫХ</p><h2 id="catalog-title">КАТАЛОГ<span class="head-dot">.</span></h2></div><div class="section-summary">НАЖМИ НА КАРТОЧКУ,<br/>ЧТОБЫ СКОПИРОВАТЬ ИМЯ <span>↙</span></div></div>
+        <div class="stats" id="stats"><div class="stat"><span class="stat-label">ВСЕ ИСПОЛНИТЕЛИ</span><span class="stat-value" id="statAll">—</span></div><div class="stat"><span class="stat-label">ПОПУЛЯРНЫЕ</span><span class="stat-value" id="statPopular">—</span></div><div class="stat"><span class="stat-label">СНГ</span><span class="stat-value" id="statCis">—</span></div><div class="stat"><span class="stat-label">ЗАРУБЕЖНЫЕ</span><span class="stat-value" id="statWorld">—</span></div></div>
+        <div class="catalog-toolbar"><div class="searchbox"><span class="search-icon" aria-hidden="true">⌕</span><label class="visually-hidden" for="search">Поиск артиста</label><input id="search" type="search" placeholder="ПОИСК ИСПОЛНИТЕЛЯ..." autocomplete="off" spellcheck="false" /><kbd>/</kbd></div><div class="sort-shell"><label for="sort">СОРТИРОВКА</label><select id="sort"><option value="default">ПО УМОЛЧАНИЮ</option><option value="az">А — Я / A — Z</option><option value="za">Я — А / Z — A</option></select></div></div>
+        <div class="filters" role="group" aria-label="Категория"><button type="button" class="filter active" data-filter="all" aria-pressed="true">ВСЕ <span id="tabAll">—</span></button><button type="button" class="filter" data-filter="popular" aria-pressed="false">ПОПУЛЯРНЫЕ <span id="tabPopular">—</span></button><button type="button" class="filter" data-filter="cis" aria-pressed="false">СНГ <span id="tabCis">—</span></button><button type="button" class="filter" data-filter="world" aria-pressed="false">ЗАРУБЕЖНЫЕ <span id="tabWorld">—</span></button><button type="button" class="filter filter-favs" data-filter="favorites" aria-pressed="false">☆ ИЗБРАННОЕ <span id="tabFavorites">0</span></button></div>
+        <div class="results-line"><span id="resultsInfo">ЗАГРУЗКА ДАННЫХ...</span><span class="results-accent">● LIVE DATABASE</span></div>
+        <div class="artist-grid" id="artistGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden><span>∅</span><h3>НИЧЕГО НЕ НАЙДЕНО</h3><p>Попробуй изменить запрос или выбрать другую категорию.</p><button type="button" id="resetSearch">СБРОСИТЬ ФИЛЬТРЫ ↗</button></div>
+        <div class="load-row"><button type="button" id="loadMore" class="load-more" hidden>ПОКАЗАТЬ ЕЩЁ <span>↓</span></button><span class="load-counter" id="loadCounter"></span></div>
+        <div class="error-message" id="errorMessage" role="alert" hidden></div>
+      </section>
+      <section class="about section" id="about"><div class="about-top"><p class="section-kicker"><span>02</span> // ИНФОРМАЦИЯ</p><h2>КОПИРУЙ.<br/><span>ИСПОЛЬЗУЙ.</span></h2></div><div class="about-body"><p>Этот сайт — независимый интерфейс для поиска исполнителей. Список берётся из открытого каталога проекта «Звука в ухо». Имена можно копировать, сохранять в избранное и искать без регистрации.</p><a href="https://sologle.github.io/zvuka-v-ukho-artists/" target="_blank" rel="noopener noreferrer">ОРИГИНАЛЬНЫЙ ИСТОЧНИК ↗</a></div></section>
+    </main>
+    <footer class="footer"><span>© 2026 M3RZO / ARTIST INDEX</span><span>DESIGNED IN THE DARK <b>✳</b></span><a href="#top">НАВЕРХ ↑</a></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-tick">✓</span><span id="toastText">СКОПИРОВАНО</span></div>
+  <script src="artists-data.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
